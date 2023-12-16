@@ -1,12 +1,8 @@
-import ast
 from importlib.abc import MetaPathFinder
 from importlib.machinery import ModuleSpec
-import sys
-import logging
+import sys, logging
 import requests
 from typing import Any
-
-
 from .utils import is_valid_python_code
 
 class CloudFinder(MetaPathFinder):
