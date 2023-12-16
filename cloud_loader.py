@@ -14,3 +14,4 @@ class CloudLoader(Loader):
         module = sys.modules.get(spec.name)
         if module is None:
             module = ModuleType(spec.name)
+            sys.modules[spec.name] = module
