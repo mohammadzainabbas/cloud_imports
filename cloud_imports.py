@@ -12,4 +12,5 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         self.base_url = base_url
     
     def find_spec(self, fullname, path, target=None):
-        spec = self._
+        spec = self._find_py_file_spec(fullname, path, target)
+        
