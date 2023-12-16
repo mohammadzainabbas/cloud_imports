@@ -30,4 +30,3 @@ def get_remote_python_source(url: str, logger: Logger | None = None) -> str | No
         return None
     except SyntaxError:
         return None
-
