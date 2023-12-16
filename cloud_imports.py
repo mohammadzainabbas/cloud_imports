@@ -21,14 +21,5 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         url = f"{self.base_url}/{fullname.replace(".", "/")}.py"
         source = self._get_remote_python_source(url)
         if source is None: return None
-
         loader = CloudLoader(fullname, source, url)
-
-        try:
-            code = requests.get(url).text
-        except requests.exceptions.RequestException:
-            return None
-        if not is_valid_python_code(code):
-            logging.warning(f"Invalid Python code at {url}")
-            return None
-        return importlib.machinery.ModuleSpec(fullname, CloudLoader(code, url))
+        return importlib.machinery.ModuleSpec(fullname, loader, origin=url)
