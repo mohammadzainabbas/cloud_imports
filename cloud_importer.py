@@ -23,7 +23,7 @@ def add_github_repo(repo_url: str | None) -> None:
     """
     add_repo(repo_url)
 
-def extract_github_info(url: str):
+def extract_github_info(url: str, branch: str = 'main'):
     """
     Extracts the username, repository, and branch from a GitHub URL.
 
@@ -40,6 +40,6 @@ def extract_github_info(url: str):
 
     username = path_parts[0] if len(path_parts) > 0 else None
     repo = path_parts[1] if len(path_parts) > 1 else None
-    branch = path_parts[3] if len(path_parts) > 3 else 'main'
+    branch = path_parts[3] if len(path_parts) > 3 else branch
 
     return {'username': username, 'repo': repo, 'branch': branch}
