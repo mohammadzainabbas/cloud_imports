@@ -41,7 +41,7 @@ def add_github_repo(repo_url: str | None) -> None:
     """
     add_repo(repo_url)
 
-def extract_github_info(url: str, branch: str = 'main'):
+def extract_github_info(url: str, branch: str = 'main') -> GithubRepo:
     """
     Extracts the username, repository, and branch from a GitHub URL.
 
