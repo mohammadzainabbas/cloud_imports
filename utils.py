@@ -1,5 +1,7 @@
 import ast
 from typing import IO
+from requests import get
+from requests.exceptions import HTTPError
 
 def is_valid_python_code(code: str | IO[str]) -> bool:
     """
