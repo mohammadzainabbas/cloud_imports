@@ -16,4 +16,7 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         
         if spec is not None: return spec
 
-        
+        spec = self._find_package_init_spec(fullname)
+
+        if spec is not None: return spec
+
