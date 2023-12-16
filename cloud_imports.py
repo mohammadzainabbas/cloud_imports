@@ -5,4 +5,4 @@ import sys
 import logging
 import requests
 
-import 
+from .utils import is_valid_python_code
