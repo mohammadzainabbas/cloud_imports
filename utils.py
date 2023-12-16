@@ -2,7 +2,7 @@ import ast
 from typing import IO, Optional
 from requests import get
 from requests.exceptions import HTTPError
-import logging
+from logging import Logger
 
 def is_valid_python_code(code: str | IO[str]) -> bool:
     """
@@ -14,7 +14,7 @@ def is_valid_python_code(code: str | IO[str]) -> bool:
         return False
     return True
 
-def get_remote_python_source(url: str, logger: Optional = None) -> str | None:
+def get_remote_python_source(url: str, logger: Optional[Logger] = None) -> str | None:
     """
     Get the Python source code from the given URL.
     """
