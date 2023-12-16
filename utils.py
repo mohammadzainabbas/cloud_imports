@@ -1,5 +1,5 @@
 import ast
-from typing import IO, Optional
+from typing import IO
 from requests import get
 from requests.exceptions import HTTPError
 from logging import Logger
