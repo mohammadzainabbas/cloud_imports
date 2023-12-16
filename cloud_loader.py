@@ -1,7 +1,7 @@
 from importlib.abc import Loader
 from importlib.machinery import ModuleSpec
 import sys, logging, 
-from types inport ModuleType
+from types import ModuleType
 
 class CloudLoader(Loader):
     
@@ -13,4 +13,4 @@ class CloudLoader(Loader):
     def create_module(self, spec: ModuleSpec | None = None) -> None:
         module = sys.modules.get(spec.name)
         if module is None:
-            module = types.ModuleType(spec.name)
+            module = ModuleType(spec.name)
