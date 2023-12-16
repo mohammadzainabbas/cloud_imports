@@ -50,9 +50,7 @@ def add_github_repo(username: str | None, repo_url: str | None, branch: str | No
     add_github_repo_from_url("
     ```
     """
-    repo = GithubRepo(username, repo_url, branch)
-    add_repo(repo.url)
-    return repo
+    return GithubRepo(username, repo_url, branch)
 
 
 def extract_github_info(url: str, branch: str = 'main') -> GithubRepo:
