@@ -34,16 +34,12 @@ def add_github_repo(repo_url: str | None) -> None:
     ```python
     add_github_repo("https://github.com/mohammadzainabbas/cloud_imports")
     ```
-
-    This will add the repository `
-
-
+    
     """
     add_repo(repo_url)
 
 def add_github_repo(username: str | None, repo_url: str | None, branch: str | None) -> GithubRepo:
     return GithubRepo(username, repo_url, branch)
-
 
 def extract_github_info(url: str, branch: str = 'main') -> GithubRepo:
     """
