@@ -5,7 +5,7 @@ import sys, logging
 import requests
 from typing import Any
 
-from .cloud_loader import CloudLoader
+from .git_loader import CloudLoader
 from .utils import get_remote_python_source
 
 class CloudFinder(MetaPathFinder):
