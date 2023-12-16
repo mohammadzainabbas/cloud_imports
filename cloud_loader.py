@@ -9,4 +9,5 @@ class CloudLoader(Loader):
         self.url = url
 
     def create_module(self, spec):
+        modules = sys.modules.get(self.fullname)
         return None
