@@ -26,6 +26,9 @@ def add_repo(repo_url: str | None) -> None:
     """
     meta_path.append(CloudFinder(repo_url))
 
+def _add_github_repo(gh_repo: GithubRepo) -> None:
+    return add_repo(gh_repo.url)
+
 def add_github_repo(repo_url: str | None) -> None:
     """
     Add a github repository to `sys.meta_path`
@@ -34,7 +37,7 @@ def add_github_repo(repo_url: str | None) -> None:
     ```python
     add_github_repo("https://github.com/mohammadzainabbas/cloud_imports")
     ```
-    
+
     """
     add_repo(repo_url)
 
