@@ -9,6 +9,7 @@ class CloudFinder(MetaPathFinder):
     def __init__(self, base_url: str) -> None:
         self.base_url = base_url
     
+    @classmethod
     def find_spec(self, fullname: str | Any, path: Any, target: Any | None = None) -> (ModuleSpec | None):
         spec = self._find_py_file_spec(fullname)
         if spec is not None: return spec
