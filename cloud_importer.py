@@ -1,4 +1,5 @@
 from sys import meta_path
+from urllib.parse import urlparse
 from .cloud_finder import CloudFinder
 
 def add_repo(repo_url: str | None) -> None:
@@ -18,7 +19,29 @@ def add_github_repo(repo_url: str | None) -> None:
 
     This will add the repository `
 
-    
+
     """
     add_repo(repo_url)
 
+
+
+def extract_github_info(url: str):
+    """
+    Extracts the username, repository, and branch from a GitHub URL.
+
+    If no branch is specified in the URL, 'main' is returned as the default branch.
+
+    Parameters:
+    url (str): The GitHub URL.
+
+    Returns:
+    dict: A dictionary containing the 'username', 'repo', and 'branch'.
+    """
+    parsed_url = urlparse(url)
+    path_parts = parsed_url.path.strip("/").split("/")
+
+    username = path_parts[0] if len(path_parts) > 0 else None
+    repo = path_parts[1] if len(path_parts) > 1 else None
+    branch = path_parts[3] if len(path_parts) > 3 else 'main'
+
+    return {'username': username, 'repo': repo, 'branch': branch}
