@@ -7,4 +7,8 @@ def add_repo(repo_url: str | None) -> None:
     """
     meta_path.append(CloudFinder(repo_url))
 
-def 
+def add_git_repo(repo_url: str | None) -> None:
+    """
+    Add a git repository to `sys.meta_path`
+    """
+    add_repo(repo_url)
