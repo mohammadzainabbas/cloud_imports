@@ -10,6 +10,5 @@ class CloudLoader(Loader):
         self.url = url
 
     def create_module(self, spec: ModuleSpec | None = None) -> None:
-        modules = sys.modules.get(spec.name)
-
-        
+        module = sys.modules.get(spec.name)
+        if module is None:
