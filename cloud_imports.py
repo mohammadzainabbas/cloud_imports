@@ -22,7 +22,7 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         source = self._get_remote_python_source(url)
         if source is None: return None
 
-        loader = 
+        loader = CloudLoader(fullname, source, url)
 
         try:
             code = requests.get(url).text
