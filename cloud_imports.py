@@ -29,4 +29,4 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         source = self._get_remote_python_source(url)
         if source is None: return None
         loader = CloudLoader(fullname, source, url)
-        return importlib.machinery.ModuleSpec(fullname, loader, origin=url)
+        return importlib.machinery.ModuleSpec(fullname, loader, origin=url, is_package=True)
