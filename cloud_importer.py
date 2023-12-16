@@ -41,7 +41,7 @@ def add_github_repo(repo_url: str | None) -> None:
     """
     add_repo(repo_url)
 
-def add_github_repo(repo_url: str | None, ) -> None:
+def add_github_repo(username: str | None, repo_url: str | None, ) -> None:
     """
     Add a github repository to `sys.meta_path`
 
