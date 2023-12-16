@@ -17,4 +17,6 @@ class CloudLoader(Loader):
             sys.modules[spec.name] = module
         return module
     
-    def 
+    def exec_module(self, module: ModuleType) -> None:
+        
+        exec(self.source_code, module.__dict__)
