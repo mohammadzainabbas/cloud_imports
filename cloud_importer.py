@@ -27,7 +27,7 @@ def add_repo(repo_url: str | None) -> None:
     meta_path.append(CloudFinder(repo_url))
 
 def _add_github_repo(gh_repo: GithubRepo) -> None:
-    return add_repo(gh_repo.url)
+    add_repo(gh_repo.url)
 
 def add_github_repo(repo_url: str | None) -> None:
     """
