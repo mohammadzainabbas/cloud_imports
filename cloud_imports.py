@@ -6,7 +6,7 @@ from typing import Any
 from .utils import is_valid_python_code
 
 class CloudFinder(MetaPathFinder):
-    def __init__(self, base_url: str):
+    def __init__(self, base_url: str) -> None:
         self.base_url = base_url
     
     def find_spec(self, fullname: str | Any, path: Any, target: Any | None = None) -> (ModuleSpec | None):
