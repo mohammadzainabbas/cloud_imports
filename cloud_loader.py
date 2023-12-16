@@ -1,6 +1,7 @@
 from importlib.abc import Loader
 import sys, logging
 
-
-class CloudLoader:
-    pass
+class CloudLoader(Loader):
+    
+    def __init__(self) -> None:
+        super().__init__()
