@@ -1,10 +1,12 @@
 import ast
 import importlib.abc
 import importlib.machinery
+import importlib.machinery.ModuleSpec
 import sys
 import logging
 import requests
 from typing import Any
+
 
 from .utils import is_valid_python_code
 
