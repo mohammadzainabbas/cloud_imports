@@ -16,3 +16,14 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         if spec is not None: return spec
         spec = self._find_package_init_spec(fullname)
         return spec if spec is not None else None
+    
+    def _find_py_file_spec(self, fullname):
+        url = f"{self.base_url}/{fullname}.py"
+        try:
+            code = requests.get(url).text
+        except requests.exceptions.RequestException:
+            return None
+        if not is_valid_python_code(code):
+            logging.warning(f"Invalid Python code at {url}")
+            return None
+        return importlib.machinery.ModuleSpec(fullname, CloudLoader(code, url))
