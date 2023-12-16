@@ -24,4 +24,5 @@ class CloudLoader(LazyLoader):
         return module
     
     def get_source(self, name: str) -> str | None:
+        s = compile(self.source_code, self.url, 'exec')
         return self.source_code
