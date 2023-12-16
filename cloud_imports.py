@@ -19,6 +19,7 @@ class CloudFinder(importlib.abc.MetaPathFinder):
     
     def _find_py_file_spec(self, fullname: str):
         url = f"{self.base_url}/{fullname.replace(".", "/")}.py"
+        source = self._get
         try:
             code = requests.get(url).text
         except requests.exceptions.RequestException:
