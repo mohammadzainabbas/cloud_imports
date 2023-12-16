@@ -3,6 +3,8 @@ from importlib.machinery import ModuleSpec
 import sys, logging
 import requests
 from typing import Any
+
+from .cloud_loader import CloudLoader
 from .utils import is_valid_python_code
 
 class CloudFinder(MetaPathFinder):
