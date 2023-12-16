@@ -1,5 +1,6 @@
 from sys import meta_path
 from .cloud_finder import CloudFinder
+from typing import Callable
 
 def add_repo(repo_url: str | None) -> None:
     """
@@ -13,4 +14,4 @@ def add_git_repo(repo_url: str | None) -> None:
     """
     add_repo(repo_url)
 
-add_github_repo: callable = add_git_repo
+add_github_repo: Callable = add_git_repo
