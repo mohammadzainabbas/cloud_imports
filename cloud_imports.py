@@ -13,10 +13,6 @@ class CloudFinder(importlib.abc.MetaPathFinder):
     
     def find_spec(self, fullname, path, target=None):
         spec = self._find_py_file_spec(fullname)
-        
         if spec is not None: return spec
-
         spec = self._find_package_init_spec(fullname)
-
-        if spec is not None: return spec
-
+        return spec if spec is not None else None
