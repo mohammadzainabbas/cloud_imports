@@ -14,4 +14,4 @@ def add_git_repo(repo_url: str | None) -> None:
     """
     add_repo(repo_url)
 
-add_github_repo: Callable = add_git_repo
+lambda add_github_repo: add_git_repo
