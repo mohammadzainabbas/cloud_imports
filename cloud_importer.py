@@ -1,6 +1,7 @@
 from sys import meta_path
 from .cloud_finder import CloudFinder
 from typing import Callable
+from functools import partial
 
 def add_repo(repo_url: str | None) -> None:
     """
@@ -14,4 +15,4 @@ def add_git_repo(repo_url: str | None) -> None:
     """
     add_repo(repo_url)
 
-lambda add_github_repo: add_git_repo
+add_github_repo: Callable = partial(add_git_repo)
