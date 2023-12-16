@@ -8,6 +8,7 @@ from .cloud_loader import CloudLoader
 from .utils import is_valid_python_code
 
 class CloudFinder(MetaPathFinder):
+    
     def __init__(self, base_url: str) -> None:
         self.base_url = base_url
     
