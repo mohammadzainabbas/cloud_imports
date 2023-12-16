@@ -1,6 +1,5 @@
 import ast
 from importlib.abc import MetaPathFinder
-import importlib.machinery
 from importlib.machinery import ModuleSpec
 import sys
 import logging
@@ -10,7 +9,7 @@ from typing import Any
 
 from .utils import is_valid_python_code
 
-class CloudFinder(importlib.abc.MetaPathFinder):
+class CloudFinder(MetaPathFinder):
     def __init__(self, base_url: str):
         self.base_url = base_url
     
@@ -25,14 +24,14 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         source = self._get_remote_python_source(url)
         if source is None: return None
         loader = CloudLoader(fullname, source, url)
-        return importlib.machinery.ModuleSpec(fullname, loader, origin=url)
+        return ModuleSpec(fullname, loader, origin=url)
     
     def _find_package_init_spec(self, fullname: str):
         url = f"{self.base_url}/{fullname.replace('.', '/')}/__init__.py"
         source = self._get_remote_python_source(url)
         if source is None: return None
         loader = CloudLoader(fullname, source, url)
-        return importlib.machinery.ModuleSpec(fullname, loader, origin=url, is_package=True)
+        return ModuleSpec(fullname, loader, origin=url, is_package=True)
     
     def _get_remote_python_source(self, url: str) -> str | None:
         try:
