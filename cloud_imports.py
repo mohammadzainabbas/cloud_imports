@@ -30,3 +30,16 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         if source is None: return None
         loader = CloudLoader(fullname, source, url)
         return importlib.machinery.ModuleSpec(fullname, loader, origin=url, is_package=True)
+    
+    def _get_remote_python_source(self, url: str) -> str | None:
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            source = response.text
+            if not is_valid_python_code(source):
+                raise SyntaxError("Not a valid Python code")
+            return source
+        except requests.exceptions.HTTPError:
+            return None
+        except SyntaxError:
+            return None
