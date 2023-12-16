@@ -18,6 +18,7 @@ def get_remote_python_source(url: str, logger) -> str | None:
     Get the Python source code from the given URL.
     """
     try:
+        logger.debug(f"Getting remote Python source from {url}")
         response = get(url)
         response.raise_for_status()
         source = response.text
