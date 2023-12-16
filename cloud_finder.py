@@ -1,4 +1,5 @@
 from importlib.abc import MetaPathFinder
+from importlib.abc import LazyLoader
 from importlib.machinery import ModuleSpec
 import sys, logging
 import requests
