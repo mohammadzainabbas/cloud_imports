@@ -13,7 +13,7 @@ def is_valid_python_code(code: str | IO[str]) -> bool:
         return False
     return True
 
-def get_remote_python_source(url: str, logger) -> str | None:
+def get_remote_python_source(url: str, logger: Optional = None) -> str | None:
     """
     Get the Python source code from the given URL.
     """
