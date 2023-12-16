@@ -17,6 +17,9 @@ class CloudLoader(Loader):
             sys.modules[spec.name] = module
         return module
     
-    def exec_module(self, module: ModuleType) -> ModuleType:
+    def exec_module(self, module: ModuleType) -> ModuleType | None:
         module.__file__ = self.url
         exec(self.source_code, module.__dict__)
+        return module
+    
+    
