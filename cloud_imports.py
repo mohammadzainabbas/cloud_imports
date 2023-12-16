@@ -8,5 +8,5 @@ import requests
 from .utils import is_valid_python_code
 
 class CloudFinder(importlib.abc.MetaPathFinder):
-    def __init__(self, cloud_url):
-        self.cloud_url = cloud_url
+    def __init__(self, base_url: str):
+        self.base_url = base_url
