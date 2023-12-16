@@ -1,9 +1,10 @@
 from importlib.abc import Loader
+from importlib.util import LazyLoader
 from importlib.machinery import ModuleSpec
 from types import ModuleType
 import sys, logging
 
-class CloudLoader(Loader):
+class CloudLoader(LazyLoader):
     
     def __init__(self, fullname: str, source_code: str, url: str) -> None:
         self.fullname = fullname
