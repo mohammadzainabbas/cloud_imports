@@ -22,5 +22,5 @@ class CloudLoader(Loader):
         exec(self.source_code, module.__dict__)
         return module
     
-    def get_source(self, ) -> ModuleType | None:
-        return sys.modules.get(fullname)
+    def get_source(self, name: str) -> str | None:
+        return self.source_code
