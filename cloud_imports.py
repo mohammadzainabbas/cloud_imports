@@ -23,3 +23,10 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         if source is None: return None
         loader = CloudLoader(fullname, source, url)
         return importlib.machinery.ModuleSpec(fullname, loader, origin=url)
+    
+    def _find_package_init_spec(self, fullname: str):
+        url = f"{self.base_url}/{fullname.replace('.', '/')}/__init__.py"
+        source = self._get_remote_python_source(url)
+        if source is None: return None
+        loader = CloudLoader(fullname, source, url)
+        return importlib.machinery.ModuleSpec(fullname, loader, origin=url)
