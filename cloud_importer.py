@@ -42,14 +42,6 @@ def add_github_repo(repo_url: str | None) -> None:
     add_repo(repo_url)
 
 def add_github_repo(username: str | None, repo_url: str | None, branch: str | None) -> GithubRepo:
-    """
-    Add a github repository to `sys.meta_path`
-
-    Example:
-    ```python
-    add_github_repo_from_url("
-    ```
-    """
     return GithubRepo(username, repo_url, branch)
 
 
