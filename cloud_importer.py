@@ -6,9 +6,9 @@ from dataclasses import dataclass
 
 @dataclass(slots=True)
 class GithubRepo:
-    username: str
-    repo: str
-    branch: str = 'main'
+    username: str | None
+    repo: str | None
+    branch: str | None = 'main'
     
     @property
     def url(self) -> str:
