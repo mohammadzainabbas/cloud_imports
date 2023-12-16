@@ -4,7 +4,7 @@ from .cloud_finder import CloudFinder
 
 from dataclasses import dataclass
 
-@dataclass
+@dataclass(slots=True)
 class GithubRepo:
     username: str
     repo: str
