@@ -1,5 +1,5 @@
 import ast
-import importlib.abc
+from importlib.abc import MetaPathFinder
 import importlib.machinery
 from importlib.machinery import ModuleSpec
 import sys
