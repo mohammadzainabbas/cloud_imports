@@ -2,6 +2,14 @@ from sys import meta_path
 from urllib.parse import urlparse
 from .cloud_finder import CloudFinder
 
+from dataclasses import dataclass
+
+@dataclass
+class GithubRepo:
+    username: str
+    repo: str
+    branch: str = 'main'
+
 def add_repo(repo_url: str | None) -> None:
     """
     Add a repository to `sys.meta_path`
