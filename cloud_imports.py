@@ -7,4 +7,6 @@ import requests
 
 from .utils import is_valid_python_code
 
-class CloudFinder()
+class CloudFinder(importlib.abc.MetaPathFinder):
+    def __init__(self, cloud_url):
+        self.cloud_url = cloud_url
