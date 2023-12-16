@@ -1,7 +1,7 @@
 import ast
 import importlib.abc
 import importlib.machinery
-import importlib.machinery.ModuleSpec
+from importlib.machinery import ModuleSpec
 import sys
 import logging
 import requests
@@ -14,7 +14,7 @@ class CloudFinder(importlib.abc.MetaPathFinder):
     def __init__(self, base_url: str):
         self.base_url = base_url
     
-    def find_spec(self, fullname: str | Any, path: Any, target: Any | None = None) -> (ModuleSpec | None):
+    def find_spec(self, fullname: str | Any, path: Any, target: Any | None = None) -> (importlib.machinery.ModuleSpec | None):
         spec = self._find_py_file_spec(fullname)
         if spec is not None: return spec
         spec = self._find_package_init_spec(fullname)
