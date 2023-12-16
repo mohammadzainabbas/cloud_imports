@@ -42,4 +42,4 @@ def extract_github_info(url: str, branch: str = 'main'):
     repo = path_parts[1] if len(path_parts) > 1 else None
     branch = path_parts[3] if len(path_parts) > 3 else branch
 
-    return {"username": username, 'repo': repo, 'branch': branch}
+    return {"username": username, "repo": repo, "branch": branch}
