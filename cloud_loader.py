@@ -3,4 +3,10 @@ import sys, logging
 
 class CloudLoader(Loader):
     
-    def __init__(self, fullname, source_code, url) -> None:
+    def __init__(self, fullname: str, source_code, url: str) -> None:
+        self.fullname = fullname
+        self.source_code = source_code
+        self.url = url
+
+    def create_module(self, spec):
+        return None
