@@ -1,6 +1,6 @@
 from sys import meta_path
 from urllib.parse import urlparse
-from .cloud_finder import CloudFinder
+from .git_finder import CloudFinder
 
 from dataclasses import dataclass
 
