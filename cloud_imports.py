@@ -17,8 +17,8 @@ class CloudFinder(importlib.abc.MetaPathFinder):
         spec = self._find_package_init_spec(fullname)
         return spec if spec is not None else None
     
-    def _find_py_file_spec(self, fullname):
-        url = f"{self.base_url}/{fullname}.py"
+    def _find_py_file_spec(self, fullname: str):
+        url = f"{self.base_url}/{fullname.replace(".", "/")}.py"
         try:
             code = requests.get(url).text
         except requests.exceptions.RequestException:
