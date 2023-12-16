@@ -1,4 +1,5 @@
 from importlib.abc import Loader
+from importlib.machinery import ModuleSpec
 import sys, logging
 
 class CloudLoader(Loader):
