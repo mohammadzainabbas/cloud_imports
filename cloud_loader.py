@@ -12,4 +12,4 @@ class CloudLoader(Loader):
     def create_module(self, spec: ModuleSpec | None = None) -> None:
         module = sys.modules.get(spec.name)
         if module is None:
-            module = 
+            module = types.ModuleType(spec.name)
