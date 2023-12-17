@@ -4,3 +4,4 @@ build-backend = "hatchling.build"
 
 [project]
 name = "git-import"
+description = "Import a git repository into a hatchling project"
