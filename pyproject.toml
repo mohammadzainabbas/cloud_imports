@@ -43,5 +43,5 @@ packages = ["git_import"]
 [tool.hatch.publish.index]
 disable = true
 
-[terminal.styles]
+[tool.hatch.terminal.styles]
 spinner = "..."
