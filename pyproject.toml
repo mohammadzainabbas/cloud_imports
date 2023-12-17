@@ -6,4 +6,6 @@ build-backend = "hatchling.build"
 name = "git-import"
 description = "Import python source from a git repository into your project"
 authors = [{ name="Mohammad Zain Abbas", email="mohammadzainabbas@gmail.com" }]
-
+readme = "README.md"
+license = "MIT"
+keywords = ["git", "import", "source", "repository"]
