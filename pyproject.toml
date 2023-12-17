@@ -10,3 +10,4 @@ readme = "README.md"
 license = "MIT"
 dynamic = ["version"]
 keywords = ["git", "import", "source", "repository"]
+requires-python = ">=3.8"
