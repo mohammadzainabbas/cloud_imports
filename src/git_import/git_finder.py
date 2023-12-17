@@ -22,7 +22,7 @@ class CloudFinder(MetaPathFinder):
     
     def _find_py_file_spec(self, fullname: str):
         url = f"{self.base_url}/{fullname.replace('.', '/')}.py"
-        source = get_remote_python_source(url)
+        source = get_remote_python_source(url, logger)
         if source is None: return None
         loader = CloudLoader(fullname, source, url)
         return ModuleSpec(fullname, loader, origin=url)
