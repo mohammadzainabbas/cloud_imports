@@ -3,7 +3,7 @@ from src.git_import.git_importer import GithubRepo, add_repo, add_github_repo, e
 def main():
     gh_repo = GithubRepo(username="mohammadzainabbas", repo="cloud_imports", branch="main")
     add_github_repo("https://github.com/kiranmantri/python-remote-import")
-    import pandas as pd
+    from remote_import import RemoteImporter
     print(pd.__version__)
     print(gh_repo)
 
