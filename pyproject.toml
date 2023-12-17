@@ -27,9 +27,10 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/unknown/git-import#readme"
-Issues = "https://github.com/unknown/git-import/issues"
-Source = "https://github.com/unknown/git-import"
+Documentation = "https://github.com/mohammadzainabbas/git-import#readme"
+Issues = "https://github.com/mohammadzainabbas/git-import/issues"
+Source = "https://github.com/mohammadzainabbas/git-import"
+Repository = "https://github.com/mohammadzainabbas/git-import"
 
 [tool.hatch.version]
 path = "src/git_import/__about__.py"
