@@ -41,7 +41,7 @@ def add_github_repo(repo_url: str | None) -> None:
     """
     _add_github_repo(extract_github_info(repo_url))
 
-def add_github_repo(username: str | None, repo_url: str | None, branch: str | None) -> GithubRepo:
+def add_gh_repo(username: str | None, repo_url: str | None, branch: str | None) -> GithubRepo:
     _add_github_repo(GithubRepo(username, repo_url, branch))
 
 def extract_github_info(url: str, branch: str = 'main') -> GithubRepo:
