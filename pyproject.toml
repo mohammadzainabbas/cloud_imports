@@ -25,7 +25,8 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
-    "requests==2.31.0",
+    "requests",
+    # "requests==2.31.0",
 ]
 
 [project.urls]
