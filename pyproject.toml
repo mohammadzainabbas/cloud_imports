@@ -4,4 +4,5 @@ build-backend = "hatchling.build"
 
 [project]
 name = "git-import"
-description = "Import a git repository into a hatchling project"
+description = "Import python source from a git repository into your project"
+
