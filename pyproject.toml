@@ -35,10 +35,10 @@ Issues = "https://github.com/mohammadzainabbas/git-import/issues"
 Repository = "https://github.com/mohammadzainabbas/git-import"
 
 [tool.hatch.version]
-path = "git-import/__init__.py"
+path = "git_import/__init__.py"
 
 [tool.hatch.build.targets.wheel]
-packages = ["git-import"]
+packages = ["git_import"]
 
 [tool.hatch.publish.index]
 disable = true
