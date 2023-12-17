@@ -30,9 +30,9 @@ classifiers = [
 ]
 
 [project.urls]
-homepage = "https://github.com/mohammadzainabbas/git-import"
-issues = "https://github.com/mohammadzainabbas/git-import/issues"
-repository = "https://github.com/mohammadzainabbas/git-import"
+Homepage = "https://github.com/mohammadzainabbas/git-import"
+Issues = "https://github.com/mohammadzainabbas/git-import/issues"
+Repository = "https://github.com/mohammadzainabbas/git-import"
 
 [tool.hatch.version]
 path = "git-import/__init__.py"
