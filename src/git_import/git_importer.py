@@ -18,7 +18,7 @@ class GithubRepo:
     #     return self.url
 
     def __repr__(self) -> str:
-        return f"GithubRepo(username={self.username}, repo={self.repo}, branch={self.branch})"
+        return f"GithubRepo(username='{self.username}', repo='{self.repo}', branch='{self.branch}')"
 
 def add_repo(repo_url: str | None) -> None:
     """
