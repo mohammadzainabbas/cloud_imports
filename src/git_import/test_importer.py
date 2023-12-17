@@ -4,8 +4,8 @@ def main():
     gh_repo = GithubRepo(username="mohammadzainabbas", repo="cloud_imports", branch="main")
     print(gh_repo)
 
-    # add_github_repo("https://github.com/kiranmantri/python-remote-import")
-    # from remote_import import RemoteImporter
+    add_github_repo("https://github.com/kiranmantri/python-remote-import")
+    from remote_import import RemoteImporter
 
     # r = RemoteImporter.add_remote(
     #     namespaces=["test_package"],
