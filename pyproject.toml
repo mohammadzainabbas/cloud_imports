@@ -33,3 +33,9 @@ classifiers = [
 homepage = "https://github.com/mohammadzainabbas/git-import"
 issues = "https://github.com/mohammadzainabbas/git-import/issues"
 repository = "https://github.com/mohammadzainabbas/git-import"
+
+[tool.hatch.version]
+path = "git-import/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["git-import"]
