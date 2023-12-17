@@ -24,6 +24,9 @@ classifiers = [
     'Programming Language :: Python :: 3.12',
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "requests >= 2.26.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/mohammadzainabbas/git-import"
