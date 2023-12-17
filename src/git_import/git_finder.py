@@ -32,4 +32,3 @@ class CloudFinder(MetaPathFinder):
         if source is None: return None
         loader = CloudLoader(fullname, source, url)
         return ModuleSpec(fullname, loader, origin=url, is_package=True)
-    
