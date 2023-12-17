@@ -1,12 +1,13 @@
 from importlib.abc import MetaPathFinder
 from importlib.util import LazyLoader
 from importlib.machinery import ModuleSpec
-import sys, logging
-import requests
+import logging
 from typing import Any
 
 from .git_loader import CloudLoader
 from .utils import get_remote_python_source
+
+logger = logging.getLogger("remote_import")
 
 class CloudFinder(MetaPathFinder):
 
