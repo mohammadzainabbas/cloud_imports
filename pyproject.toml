@@ -7,7 +7,7 @@ name = "git-import"
 description = "Import python source from a git repository into your project"
 authors = [{ name="Mohammad Zain Abbas", email="mohammadzainabbas@gmail.com" }]
 readme = "README.md"
-license = "MIT"
+license = {file = 'LICENSE'}
 dynamic = ["version"]
 keywords = ["git", "import", "source", "repository"]
 requires-python = ">=3.8"
