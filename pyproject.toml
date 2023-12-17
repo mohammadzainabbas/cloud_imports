@@ -39,3 +39,6 @@ path = "git-import/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["git-import"]
+
+[tool.hatch.publish.index]
+disable = true
