@@ -14,8 +14,8 @@ class GithubRepo:
     def url(self) -> str:
         return f"https://raw.githubusercontent.com/{self.username}/{self.repo}/{self.branch}"
 
-    # def __str__(self) -> str:
-    #     return self.url
+    def __str__(self) -> str:
+        return self.url
 
     def __repr__(self) -> str:
         return f"GithubRepo(username='{self.username}', repo='{self.repo}', branch='{self.branch}')"
