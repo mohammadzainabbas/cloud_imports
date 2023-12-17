@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = 'Import python source from a git repository into your project.'
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
+license = {file = 'LICENSE'}
 keywords = []
 authors = [
   { name = "Mohammad Zain Abbas", email = "mohammadzainabbas@gmail.com" },
