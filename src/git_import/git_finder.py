@@ -20,7 +20,7 @@ class CloudFinder(MetaPathFinder):
         return spec if spec is not None else None
     
     def _find_py_file_spec(self, fullname: str):
-        url = f"{self.base_url}/{fullname.replace(".", "/")}.py"
+        url = f"{self.base_url}/{fullname.replace('.', '/')}.py"
         source = get_remote_python_source(url)
         if source is None: return None
         loader = CloudLoader(fullname, source, url)
